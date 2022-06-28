@@ -6,6 +6,7 @@
     background-color: rgb(218, 218, 105);
     position: relative;
     top: 70px;
+    scroll-behavior: smooth;
     scroll-snap-type: y mandatory;
     scrollbar-width: none; //firefox
     &::-webkit-scrollbar {
