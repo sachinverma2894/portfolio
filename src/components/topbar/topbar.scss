@@ -8,6 +8,7 @@
   position: fixed;
   top: 0;
   z-index: 2;
+  transition: all 1s ease;
 
   .wrapper {
     padding: 10px 20px;
@@ -39,6 +40,48 @@
         span {
           font-size: 15px;
           font-weight: 700;
+        }
+      }
+    }
+
+    .right {
+      .hamburger {
+        display: flex;
+        width: 2rem;
+        height: 1.65rem;
+        flex-direction: column;
+        justify-content: space-between;
+
+        span {
+          width: 100%;
+          height: 0.2rem;
+          background-color: $mainColor;
+          transform-origin: left;
+          transition: all 2s ease;
+        }
+      }
+    }
+  }
+
+  &.active {
+    background-color: $mainColor;
+    color: white;
+
+    .hamburger {
+      span {
+        &:first-child {
+          background-color: white;
+          transform: rotate(45deg);
+        }
+
+        &:nth-child(2) {
+          // background-color: white;
+          opacity: 0;
+        }
+
+        &:last-child {
+          background-color: white;
+          transform: rotate(-45deg);
         }
       }
     }
